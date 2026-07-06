@@ -26,14 +26,10 @@ class PlantEntity(CoordinatorEntity[Any]):
         self._plant_id = plant_id
 
     @property
-    def coordinator(self) -> PlantCoordinator:
-        """Return the coordinator."""
-        return self._coordinator  # type: ignore[return-value]
-
-    @property
     def plant(self) -> Plant | None:
         """Get the plant object."""
-        return self.coordinator.data.get(self._plant_id) if self.coordinator.data else None
+        coordinator: PlantCoordinator = self.coordinator  # type: ignore[assignment]
+        return coordinator.data.get(self._plant_id) if coordinator.data else None
 
     @property
     def device_info(self) -> DeviceInfo:
