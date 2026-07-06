@@ -1,0 +1,37 @@
+complete_task:
+  name: Complete Task
+  description: Mark a plant care task as completed
+  fields:
+    plant_id:
+      name: Plant ID
+      description: ID of the plant
+      required: true
+      example: "abc123"
+      selector:
+        text:
+    task_id:
+      name: Task ID
+      description: ID of the task to complete
+      required: true
+      example: "water"
+      selector:
+        text:
+
+set_growth_stage:
+  name: Set Growth Stage
+  description: Change the growth stage of a plant
+  fields:
+    plant_id:
+      name: Plant ID
+      description: ID of the plant
+      required: true
+      example: "abc123"
+      selector:
+        text:
+    stage_id:
+      name: Stage ID
+      description: ID of the growth stage
+      required: true
+      example: "flowering"
+      selector:
+        text:

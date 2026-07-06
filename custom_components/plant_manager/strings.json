@@ -1,0 +1,49 @@
+{
+  "config": {
+    "step": {
+      "ai_setup": {
+        "title": "Configure AI Provider",
+        "description": "Set up your OpenAI-compatible API endpoint to generate plant care profiles.\n\nExample endpoint: {endpoint_example}\nExample model: {model_example}",
+        "data": {
+          "ai_api_key": "API Key",
+          "ai_endpoint": "API Endpoint",
+          "ai_model": "Model Name"
+        }
+      },
+      "add_plant": {
+        "title": "Add Plant",
+        "description": "Enter the name of the plant you want to add.\n\nExample: {name_example}",
+        "data": {
+          "plant_name": "Plant Name"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to AI provider. Check your API key and endpoint.",
+      "cannot_add": "Failed to add plant. Check logs for details."
+    },
+    "abort": {
+      "already_configured": "This plant is already configured.",
+      "no_plants": "No plants found.",
+      "plant_not_found": "Plant not found."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Plant Settings",
+        "description": "Select a plant to change its growth stage.",
+        "data": {
+          "plant": "Plant"
+        }
+      },
+      "change_stage": {
+        "title": "Change Growth Stage",
+        "description": "Select the current growth stage for {plant_name}.",
+        "data": {
+          "growth_stage": "Growth Stage"
+        }
+      }
+    }
+  }
+}
